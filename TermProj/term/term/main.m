@@ -8,10 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+void goodDay (char *timeOfDay){
+    printf("Good %s\n", timeOfDay);
+}
+
+void allDay(void) {
+    goodDay("morning");
+    goodDay("evening");
+    goodDay("day");
+}
+
+void dayGreeting(int loops){
+    for (int i = 0; i < loops; i++) {
+        allDay();
     }
+}
+
+int main(int argc, const char * argv[]) {
+    
+    dayGreeting(1);
     return 0;
 }
